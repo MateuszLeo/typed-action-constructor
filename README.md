@@ -1,2 +1,2 @@
 # typed-action-constructor
-Type safe action redux constructor
+Type safe redux action constructor
