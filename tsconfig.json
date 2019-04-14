@@ -11,8 +11,7 @@
         "noUnusedParameters": false,
         "noFallthroughCasesInSwitch": true,
         "forceConsistentCasingInFileNames": true,
+        "noImplicitAny": true
     },
-    "include": [
-        "./src/**/*"
-    ]
+    "include": ["./src/**/*"]
 }

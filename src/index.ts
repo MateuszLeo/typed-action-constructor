@@ -1,2 +1,2 @@
-export * from './createAction'
-export * from './ActionType'
+export * from './createAction';
+export * from './ActionType';

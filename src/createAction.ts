@@ -1,16 +1,7 @@
-import { ActionFactory } from './ActionFactory'
+import { ActionCreatorFactory } from './ActionCreatorFactory';
 
-export function createAction<Type extends string, Payload = undefined>(type: Type): ActionFactory<Type, Payload> {
-    const builder = (payload?: Payload) => {
-        if (!payload) {
-            return { type }
-        }
-
-        return {
-            type,
-            payload,
-        }
-    }
-
-    return builder as any
+export function createAction<Type extends string, Payload = undefined>(
+    type: Type,
+): ActionCreatorFactory<Type, Payload> {
+    return ((payload?: Payload) => (payload ? { type } : { type, payload })) as any;
 }
